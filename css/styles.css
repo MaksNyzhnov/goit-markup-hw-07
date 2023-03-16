@@ -1104,6 +1104,9 @@ address {
     display: none;
   }
 }
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
 .menu-close-btn {
   position: absolute;
   top: 24px;
@@ -1169,5 +1172,5 @@ address {
   margin-right: 0;
   margin-left: 0;
   margin-top: 0;
-  gap: 56px;
+  gap: 46px;
 }
