@@ -350,7 +350,11 @@ address {
 .feature-section {
   padding-bottom: 72px;
 }
-
+@media screen and (min-width: 1200px) {
+  .feature-section {
+    padding-bottom: 0;
+  }
+}
 .feature-image {
   display: none;
   align-items: center;
@@ -375,7 +379,8 @@ address {
 @media screen and (min-width: 768px) {
   .feature-list {
     display: flex;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 72px;
     flex-wrap: wrap;
   }
 }
@@ -390,6 +395,7 @@ address {
 @media screen and (min-width: 768px) {
   .feature-list .item {
     flex-basis: calc((100% - 24px) / 2);
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -620,20 +626,20 @@ address {
 }
 @media screen and (min-width: 768px) {
   .footer > .container {
-    align-items: flex-start;
-    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
+
+    padding-left: 110px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer > .container {
-    align-items: flex-start;
-
     flex-direction: row;
     flex-wrap: nowrap;
     column-gap: 0;
+
+    padding-left: 0;
     margin-left: auto;
     margin-right: auto;
   }
@@ -648,13 +654,11 @@ address {
   .footer-info {
     align-items: flex-start;
     text-align: left;
-    margin-left: -55px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer-info {
     margin-right: 120px;
-    margin-left: 0;
   }
 }
 .footer-socials > .social-list {
