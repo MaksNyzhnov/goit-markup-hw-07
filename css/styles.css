@@ -191,6 +191,9 @@ address {
     .auth-links {
       flex-direction: row;
       gap: 24px;
+
+      font-size: 16px;
+      line-height: 1.5;
     }
   }
   .auth-links .link {
@@ -230,7 +233,7 @@ address {
 /* hero */
 .hero {
   margin: 0 auto;
-  padding: 188px 0;
+  padding: 112px 0;
   text-align: center;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -243,6 +246,11 @@ address {
   max-width: 1440px;
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding: 188px 0;
+  }
 }
 
 @media screen and (min-device-pixel-ratio: 2),
@@ -339,6 +347,10 @@ address {
 }
 /* features */
 
+.feature-section {
+  padding-bottom: 72px;
+}
+
 .feature-image {
   display: none;
   align-items: center;
@@ -373,6 +385,7 @@ address {
   }
 }
 .feature-list .item {
+  margin-bottom: 72px;
 }
 @media screen and (min-width: 768px) {
   .feature-list .item {
@@ -387,6 +400,7 @@ address {
 
 .feature-list .item:last-child {
   margin-right: 0;
+  margin-bottom: 0;
 }
 
 .feature-list h3 {
@@ -411,18 +425,19 @@ address {
 }
 
 .feature-list p {
-  margin-bottom: 72px;
+  margin-bottom: 0;
   font-weight: 500;
   text-align: center;
 }
+
 @media screen and (min-width: 768px) {
   .feature-list p {
     text-align: left;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .feature-list p {
-    margin-bottom: 0;
     font-weight: 400;
   }
 }
@@ -606,11 +621,10 @@ address {
 @media screen and (min-width: 768px) {
   .footer > .container {
     align-items: flex-start;
-
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
-    margin-left: 108px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -634,11 +648,13 @@ address {
   .footer-info {
     align-items: flex-start;
     text-align: left;
+    margin-left: -55px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer-info {
     margin-right: 120px;
+    margin-left: 0;
   }
 }
 .footer-socials > .social-list {
@@ -1140,7 +1156,7 @@ address {
 
   margin-bottom: 40px;
 }
-.mobile-nav-list > .item:last-child {
+.mobile-nav-list > .item:first-child {
   color: var(--secondary-brand-color);
 }
 .mobile-menu a {
